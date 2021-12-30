@@ -7,7 +7,7 @@ jobs:
         steps:
         - run: echo "これは ${{ github.event_name}} によってトリガーされました。"
         - run: echo "現在 ${{ runner.os }} 上で動作しています。"
-        - run: echo "対象は Repository:${{ github.repository }} Brach: ${{ github.ref }} です。"
+        - run: echo "対象は Repository -> ${{ github.repository }} Brach -> ${{ github.ref }} です。"
         - name: Checkout
             uses: actions/checkout@v2
         - name: Listing repository
