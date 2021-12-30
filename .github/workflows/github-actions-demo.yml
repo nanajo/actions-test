@@ -8,9 +8,9 @@ jobs:
         - run: echo "これは ${{ github.event_name}} によってトリガーされました。"
         - run: echo "現在 ${{ runner.os }} 上で動作しています。"
         - run: echo "対象は Repository:${{ github.repository }} Brach: ${{ github.ref }} です。"
-        - name: チェックアウト
+        - name: Checkout
             uses: actions/checkout@v2
-        - name: リポジトリの中身を確認
+        - name: Listing repository
             run: |
                 ls ${{ github.workspace }}
         - run: echo "Job status: ${{ job.status }}"
