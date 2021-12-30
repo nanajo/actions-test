@@ -10,7 +10,7 @@ jobs:
         - run: echo "対象は Repository -> ${{ github.repository }} Brach -> ${{ github.ref }} です。"
         - name: Checkout
           uses: actions/checkout@v2
-        - name: Listing repository
+        - name: Listing repository 日本語を使ってみる
           run: |
             ls ${{ github.workspace }}
         - run: echo "Job status -> ${{ job.status }}"
