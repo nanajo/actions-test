@@ -9,8 +9,8 @@ jobs:
         - run: echo "現在 ${{ runner.os }} 上で動作しています。"
         - run: echo "対象は Repository -> ${{ github.repository }} Brach -> ${{ github.ref }} です。"
         - name: Checkout
-            uses: actions/checkout@v2
+          uses: actions/checkout@v2
         - name: Listing repository
-            run: |
-                ls ${{ github.workspace }}
+          run: |
+            ls ${{ github.workspace }}
         - run: echo "Job status: ${{ job.status }}"
