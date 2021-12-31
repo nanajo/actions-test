@@ -14,3 +14,17 @@ jobs:
           run: |
             ls ${{ github.workspace }}
         - run: echo "Job status -> ${{ job.status }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: "User Name"
+        required: true
+        default: "hogehoge"
+        type: string
+  jobs:
+    print-name:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "My name is ${{ github.event.inputs.username }}"
