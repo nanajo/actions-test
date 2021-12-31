@@ -8,8 +8,8 @@ on:
         required: true
         default: "hogehoge"
         type: string
-  jobs:
-    print-name:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "My name is ${{ github.event.inputs.username }}"
+jobs:
+print-name:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "My name is ${{ github.event.inputs.username }}"
